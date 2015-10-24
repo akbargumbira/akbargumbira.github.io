@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Akbar Gumbira</title>
+    <title>Timeline</title>
     <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,37 +33,12 @@
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml?v=wAAv6Wqe6l">
 <meta name="theme-color" content="#e74c3c">
     <link rel="stylesheet" type="text/css" href="assets/css/uno-zen.css?v=d6588e3d7e" />
-    <link rel="canonical" href="http://localhost:2368/" />
+    <link rel="canonical" href="http://localhost:2368/timeline/" />
     <meta name="referrer" content="origin" />
-    
-    <meta property="og:site_name" content="Akbar Gumbira" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Akbar Gumbira" />
-    <meta property="og:description" content="I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon" />
-    <meta property="og:url" content="http://localhost:2368/" />
-    <meta property="og:image" content="http://localhost:2368/content/images/2015/10/DSC01620-2.JPG" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Akbar Gumbira" />
-    <meta name="twitter:description" content="I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon" />
-    <meta name="twitter:url" content="http://localhost:2368/" />
-    <meta name="twitter:image:src" content="http://localhost:2368/content/images/2015/10/DSC01620-2.JPG" />
-    
-    <script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": "Akbar Gumbira",
-    "url": "http://localhost:2368/",
-    "image": "http://localhost:2368/content/images/2015/10/DSC01620-2.JPG",
-    "description": "I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon"
-}
-    </script>
-
     <meta name="generator" content="Ghost 0.7" />
     <link rel="alternate" type="application/rss+xml" title="Akbar Gumbira" href="http://localhost:2368/rss/" />
   </head>
-  <body class="home-template">
+  <body class="post-template page-template page page-timeline page-template-timeline">
     <header id="menu-button" class="expanded">
       <a><i class="icon icon-list"></i></a>
     </header>
@@ -159,11 +134,14 @@
     <main>
       <section id="search-results"></section>
       <section class="content">
-        <ol class="posts">
-</ol>
-<nav class="pagination" role="navigation">
-  <span class="posts index">Page 1 of 1</span>
-</nav>
+        
+
+  <article class="post page">
+    <section class="post page">
+      <iframe src='http://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=19dg1rIxJwtwzZZ2UD7vUwa1B5opRObdB81uMye7Ee80&amp;font=Default&amp;lang=en&amp;initial_zoom=2&amp;height=650' width='100%' height='650' frameborder='0'></iframe>
+    </section>
+
+  </article>
 
 
         <footer>
