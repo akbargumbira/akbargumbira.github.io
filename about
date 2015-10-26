@@ -32,11 +32,11 @@
 <meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png?v=wAAv6Wqe6l">
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml?v=wAAv6Wqe6l">
 <meta name="theme-color" content="#e74c3c">
-    <link rel="stylesheet" type="text/css" href="assets/css/uno-zen.css?v=2755148237" />
-    <link rel="canonical" href="http://akbargumbira.github.io/about/" />
+    <link rel="stylesheet" type="text/css" href="assets/css/uno-zen.css?v=8a2c33feb5" />
+    <link rel="canonical" href="http://www.akbargumbira.com/about/" />
     <meta name="referrer" content="origin" />
     <meta name="generator" content="Ghost 0.7" />
-    <link rel="alternate" type="application/rss+xml" title="Akbar Gumbira" href="http://akbargumbira.github.io/rss/" />
+    <link rel="alternate" type="application/rss+xml" title="Akbar Gumbira" href="http://www.akbargumbira.com/rss/" />
   </head>
   <body class="post-template page-template page page-about page-template-about">
     <header id="menu-button" class="expanded">
@@ -45,7 +45,7 @@
     <aside class="cover" style="background: url(content/images/2015/10/DSC01620-2.JPG) center/cover no-repeat fixed">
   <div class="cover container">
     <div class="profile">
-      <a id="avatar-link" title="link to homepage for Akbar Gumbira" href="http://akbargumbira.github.io/#open">
+      <a id="avatar-link" title="link to homepage for Akbar Gumbira" href="http://www.akbargumbira.com/#open">
         <img src="content/images/2015/10/IMG_20151018_104114907--copy--2.jpg" alt="Akbar Gumbira avatar" class="profile avatar rounded hvr-buzz-out" />
         <h1 id="profile-title">Akbar Gumbira</h1>
         <h3 id="profile-resume"></h3>
@@ -60,7 +60,7 @@
   <ul class="links">
 
     <li class="nav-blog ">
-      <a href="http://akbargumbira.github.io/#open" title="Akbar Gumbira blog">Blog</a>
+      <a href="http://www.akbargumbira.com/#open" title="Akbar Gumbira blog">Blog</a>
     </li>
 
       <li class="nav-timeline ">
@@ -156,7 +156,7 @@
       </section>
     </main>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="assets/js/uno-zen.js?v=2755148237"></script>
+    <script type="text/javascript" src="assets/js/uno-zen.js?v=8a2c33feb5"></script>
     <script>
   if (window.ga_id) {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
