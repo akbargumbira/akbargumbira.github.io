@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Akbar Gumbira</title>
+    <title>About</title>
     <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,33 +33,8 @@
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml?v=wAAv6Wqe6l">
 <meta name="theme-color" content="#e74c3c">
     <link rel="stylesheet" type="text/css" href="assets/css/uno-zen.css?v=ddf4a11003" />
-    <link rel="canonical" href="http://www.akbargumbira.com/" />
+    <link rel="canonical" href="http://www.akbargumbira.com/about/" />
     <meta name="referrer" content="origin" />
-    
-    <meta property="og:site_name" content="Akbar Gumbira" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Akbar Gumbira" />
-    <meta property="og:description" content="I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon" />
-    <meta property="og:url" content="http://www.akbargumbira.com/" />
-    <meta property="og:image" content="http://www.akbargumbira.com/content/images/2015/10/DSC01620-2.JPG" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Akbar Gumbira" />
-    <meta name="twitter:description" content="I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon" />
-    <meta name="twitter:url" content="http://www.akbargumbira.com/" />
-    <meta name="twitter:image:src" content="http://www.akbargumbira.com/content/images/2015/10/DSC01620-2.JPG" />
-    
-    <script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": "Akbar Gumbira",
-    "url": "http://www.akbargumbira.com/",
-    "image": "http://www.akbargumbira.com/content/images/2015/10/DSC01620-2.JPG",
-    "description": "I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon"
-}
-    </script>
-
     <meta name="generator" content="Ghost 0.7" />
     <link rel="alternate" type="application/rss+xml" title="Akbar Gumbira" href="http://www.akbargumbira.com/rss/" />
     <script>
@@ -73,7 +48,7 @@
 
 </script>
   </head>
-  <body class="home-template">
+  <body class="post-template page-template page page-about page-template-about">
     <header id="menu-button" class="expanded">
       <a><i class="icon icon-list"></i></a>
     </header>
@@ -178,47 +153,33 @@
     <main>
       <section id="search-results"></section>
       <section class="content">
-        <ol class="posts">
-  <li>
-    <a href="productivity-shock/index.html" title="link to Productivity Shock">
-      <h2>Productivity Shock</h2>
-      <p class="post description">As I used to work full time, right now I am quite shocked about my productivity. It's really logical though. We are more appreciative about time when we have it less (we could generalize "time" to anything valuable e.g money). Let's see what I do every weekdays now:  Attending&hellip;</p>
-    </a>
-    <div class="post meta">
-      <time datetime="09 Nov 2015">09 Nov 2015</time>
-      <span class="post tags"></span>
-      <a href="productivity-shock/index.html#disqus_thread">Comments</a>
-    </div>
-    <hr class="divider post" />
-  </li>
-  <li>
-    <a href="random-polish-thought-dziecko/index.html" title="link to Random Polish Thought: Dziecko">
-      <h2>Random Polish Thought: Dziecko</h2>
-      <p class="post description">As you know that I am learning Polish, I will probably post some random thoughts about this language over time. Let's start with the first one. Inflected Part of Speech Some POS (Part of Speech) in Polish are inflected, means that their ending would change depending on subject, tenses, number,&hellip;</p>
-    </a>
-    <div class="post meta">
-      <time datetime="28 Oct 2015">28 Oct 2015</time>
-      <span class="post tags"></span>
-      <a href="random-polish-thought-dziecko/index.html#disqus_thread">Comments</a>
-    </div>
-    <hr class="divider post" />
-  </li>
-  <li>
-    <a href="welcome-ghost/index.html" title="link to Welcome GhostBuster!">
-      <h2>Welcome GhostBuster!</h2>
-      <p class="post description">I've been wanting to use Ghost and statically publish it on Github pages since ages ago. Finally now I have time to do this. Generating static pages using Buster, setting it up, and publishing it as Github pages is actually fast and seamless. Not sure why I didn't have time&hellip;</p>
-    </a>
-    <div class="post meta">
-      <time datetime="18 Oct 2015">18 Oct 2015</time>
-      <span class="post tags"></span>
-      <a href="welcome-ghost/index.html#disqus_thread">Comments</a>
-    </div>
-    <hr class="divider post" />
-  </li>
-</ol>
-<nav class="pagination" role="navigation">
-  <span class="posts index">Page 1 of 1</span>
-</nav>
+        
+
+  <article class="post page">
+    <header>
+      <h1 id="post-title">About me</h1>
+    </header>
+
+    <section class="post page">
+      <p>Hi there! </p>
+
+<p>I am a Software Engineer holding Bachelor's Degree from Informatics ITB (Institut Teknologi Bandung, Indonesia). I am trying to be a full-stack engineer, but for the last couple of years, it seems that my work mostly involve Python and Docker. See also my professional <a href="http://127.0.0.1:2368/about/www.akbargumbira.com/timeline">Timeline</a> page to know more about my work in the past.</p>
+
+<p>At the moment, I live in Poland, continuing my master degree in Computer System and Network.</p>
+
+<p>I speak 3 languages (Bahasa Indonesia and Sundanese - my native languages, English - my second language) and now learning Polish. </p>
+
+<p>I like to always keep my fitness level high. I do running, cycling, playing badminton, and swimming.</p>
+
+<p>If you are interested to work with me, or to just have a run, don't hesitate to contact me :)</p>
+
+<div style="text-align: center;">  
+<iframe src="https://www.flickr.com/photos/akbargumbira/player/" width="640" height="480" align="middle" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>  
+</iframe>  
+</div>
+    </section>
+
+  </article>
 
 
         <footer>
