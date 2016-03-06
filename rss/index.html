@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Akbar Gumbira]]></title><description><![CDATA[I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon]]></description><link>http://www.akbargumbira.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 26 Feb 2016 21:49:07 GMT</lastBuildDate><atom:link href="http://www.akbargumbira.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[DocumentUp: Generate docs from your markdown file(s)]]></title><description><![CDATA[<p>While at the lab in a class this afternoon, I was looking for a simple way to document my side project, <a href="https://github.com/akbargumbira/django-user-map">Django User Map</a>. I am about to release the v.1 of it, I hope, in a few weeks. After comparing some options, I decided to use <a href="http://documentup.com/">DocumentUp</a>.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Akbar Gumbira]]></title><description><![CDATA[I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon]]></description><link>http://www.akbargumbira.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 06 Mar 2016 23:05:11 GMT</lastBuildDate><atom:link href="http://www.akbargumbira.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Releasing Django User Map v1.0.0]]></title><description><![CDATA[<p>Wohoo, finally I just released Django User Map v.1.0.0 after some work since 2 or 3 weeks ago! Click   <a href="http://www.akbargumbira.com/django-user-map">documentation</a> to read the docs.</p>
+
+<p>What have been changed from the previous one?</p>
+
+<h6 id="removingcustomusermodel">Removing Custom User Model</h6>
+
+<p>A bit of history, at first <a href="http://www.twitter.com/timlinux">Tim Sutton</a> and I created</p>]]></description><link>http://www.akbargumbira.com/releasing-django-user-map-v1-0-0/</link><guid isPermaLink="false">d186e306-4f17-4620-9927-87a6f52cb9dd</guid><dc:creator><![CDATA[Akbar Gumbira]]></dc:creator><pubDate>Sun, 06 Mar 2016 23:04:35 GMT</pubDate><content:encoded><![CDATA[<p>Wohoo, finally I just released Django User Map v.1.0.0 after some work since 2 or 3 weeks ago! Click   <a href="http://www.akbargumbira.com/django-user-map">documentation</a> to read the docs.</p>
+
+<p>What have been changed from the previous one?</p>
+
+<h6 id="removingcustomusermodel">Removing Custom User Model</h6>
+
+<p>A bit of history, at first <a href="http://www.twitter.com/timlinux">Tim Sutton</a> and I created the Flask version <a href="https://github.com/kartoza/flask_user_map">here</a>. It was a simple flask app with only sqlite to save users. For the online version of it, Python Indonesia is using this project here <a href="http://members.python.or.id/">Python Indonesia User Map</a>. As we needed some more features and wanted to make InaSAFE Realtime more like a web app, we created django project for all InaSAFE web related project. So the first thing I did was to re-implement the User Map with Django. </p>
+
+<p>We wanted to still keep the users from the Flask User Map and migrate them to the new Django one. The Flask User Map is using an email for user to register themselves. That's why I created a custom user model with its own authentication backend. Actually in the end, we didn't migrate the users and only e-mail the old users to register on the new site :) There were other fields (InaSAFE, OSM roles, password) that weren't available from the previous one. So, instead of migrating them with a lot of default values, we decided to just mass email them.</p>
+
+<p>But, the custom user model has made this apps not reusable for others to plug the apps on their existing django projects. So, after some thoughts, I decided to get rid of that and make Django User Map extend the auth user model defined for the project. This is making Django User Map really simple now as it doesn't care what the user model looks like, or how the authentication backend works. As the users need to log in before adding/updating themselves on the user map, the only thing I need to know is the login view of the project. This must be defined in the user map setting. Read here <a href="http://www.akbargumbira.com/django-user-map/#login-view">Login View</a></p>
+
+<h6 id="usingrestapi">Using REST API</h6>
+
+<p>I was just thinking that this resource could be useful for others to use. Right now GET is the only operation allowed, returning geojson of the users.</p>
+
+<h6 id="newmarkerfiltercontrol">New marker filter control</h6>
+
+<p>Users can select multiple roles for themselves. Therefore, I couldn't cheat filtering user based on roles using Leaflet overlay control. So, I made a custom filter control for that.</p>
+
+<h6 id="makesettingsmorecompliantwithleaflet">Make settings more compliant with Leaflet</h6>
+
+<p>For the basemap and marker icon, users (I meant, who plug Django User Map  on their Django project), can pass options using the exact same L.tiles and L.icon options. You can just pass any valid options of them in the setting. Read <a href="http://www.akbargumbira.com/django-user-map/#marker">here for marker</a> and <a href="http://www.akbargumbira.com/django-user-map/#map-configuration">here for basemap</a></p>
+
+<h6 id="allowuserstooverridedataprivacycontentandaddnavigationmenu">Allow users to override data privacy content and add navigation menu</h6>
+
+<p>This is made possible through the Django template loading mechanism. You can override the data privacy content (<a href="http://www.akbargumbira.com/django-user-map/#data-privacy">read here</a>) or add navigation menu (<a href="http://www.akbargumbira.com/django-user-map/#navigation">read here</a>)</p>
+
+<p>See below how Django User map looks like when we add navigation menu: <br>
+<img src="http://www.akbargumbira.com/content/images/2016/03/with_nav.png" alt="With Navigation"></p>
+
+<p>For the navigation, unfortunately I am not quite satisfied with it. There are some matters that I was not quite sure. One of them is whether to have the base template of User Map extend the base template of the django project or not. With this option, there are a lot of other variables unknown, such as the name of the blocks to put User Map components.</p>
+
+<p>So what I did right now is to use <code>include</code>. So the navigation defined in project's template will be included to the template in user map. As the user map uses Bootstrap 3, users can just use style classes or other component from Bootstrap 3. This is also a drawback for example when users already have their own template for navigation menu, and they use Bootstrap 2. This is the problem I found when I tried to plug Django User Map in to QGIS Django. I tried using scoped styling, but it apparently does not work for all browsers. And it was actually hard to use Bootstrap 3 and make it look like as if it uses Boostrap 2. So, users who have this problem perhaps could just not use the navigation menu. Drop me some comments if you have suggestion!</p>
+
+<h6 id="madepopupcontentdynamicallygenerated">Made popup content dynamically generated</h6>
+
+<p>Basically what you defined on the setting for <code>api_user_field</code> will be shown on the popup content and on the API. You pick what you want to show yourself!</p>
+
+<h6 id="someotherstuffs">Some other stuffs</h6>
+
+<p>Small stuffs but taking quite an effort, like:</p>
+
+<ul>
+<li>Utilising class based views. The first time I worked back on the code, I was embarassed by myself reading my own code :)</li>
+<li>Having a nice documentation: <a href="http://www.akbargumbira.com/releasing-django-user-map-v1-0-0/www.akbargumbira.com/django-user-map">This is a cool docs</a></li>
+<li>Rendering popup content in client side using jsRender. Yeah users nowadays have abundant resources of their computers. So why should we render for them on the server side? :) </li>
+</ul>
+
+<p>What is the next plan? <br>
+I want to let users who don't use spatial backend  on their django project to be able to plug this apps as well. I need to look first at some options like django-geojson.</p>
+
+<p>So, if you have Django project, try to plug this Django User Map, and let me know if you have some problems or patches! #ShamelessPlug</p>]]></content:encoded></item><item><title><![CDATA[DocumentUp: Generate docs from your markdown file(s)]]></title><description><![CDATA[<p>While at the lab in a class this afternoon, I was looking for a simple way to document my side project, <a href="https://github.com/akbargumbira/django-user-map">Django User Map</a>. I am about to release the v.1 of it, I hope, in a few weeks. After comparing some options, I decided to use <a href="http://documentup.com/">DocumentUp</a>.</p>
 
 <p>It's</p>]]></description><link>http://www.akbargumbira.com/documentup-generate-docs-from-your-markdown-file-s/</link><guid isPermaLink="false">a12aaec3-1b46-43f9-9411-c226e65eb0fe</guid><dc:creator><![CDATA[Akbar Gumbira]]></dc:creator><pubDate>Fri, 26 Feb 2016 21:42:48 GMT</pubDate><content:encoded><![CDATA[<p>While at the lab in a class this afternoon, I was looking for a simple way to document my side project, <a href="https://github.com/akbargumbira/django-user-map">Django User Map</a>. I am about to release the v.1 of it, I hope, in a few weeks. After comparing some options, I decided to use <a href="http://documentup.com/">DocumentUp</a>.</p>
 
