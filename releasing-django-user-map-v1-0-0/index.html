@@ -42,7 +42,7 @@
     <meta property="og:description" content="Wohoo, finally I just released Django User Map v.1.0.0 after some work since 2 or 3 weeks ago! Click   documentation to read the docs. What have been changed from the previous one? Removing Custom User Model A..." />
     <meta property="og:url" content="http://www.akbargumbira.com/releasing-django-user-map-v1-0-0/" />
     <meta property="article:published_time" content="2016-03-06T23:04:35.150Z" />
-    <meta property="article:modified_time" content="2016-03-06T23:04:35.149Z" />
+    <meta property="article:modified_time" content="2016-03-06T23:10:32.749Z" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Releasing Django User Map v1.0.0" />
@@ -65,7 +65,7 @@
     "headline": "Releasing Django User Map v1.0.0",
     "url": "http://www.akbargumbira.com/releasing-django-user-map-v1-0-0/",
     "datePublished": "2016-03-06T23:04:35.150Z",
-    "dateModified": "2016-03-06T23:04:35.149Z",
+    "dateModified": "2016-03-06T23:10:32.749Z",
     "description": "Wohoo, finally I just released Django User Map v.1.0.0 after some work since 2 or 3 weeks ago! Click   documentation to read the docs. What have been changed from the previous one? Removing Custom User Model A..."
 }
     </script>
@@ -210,9 +210,9 @@
     <div id="post-content" class="post">
       <p>Wohoo, finally I just released Django User Map v.1.0.0 after some work since 2 or 3 weeks ago! Click   <a href="http://www.akbargumbira.com/django-user-map">documentation</a> to read the docs.</p>
 
-<p>What have been changed from the previous one?</p>
+<p><em>What have been changed from the previous one?</em></p>
 
-<h6 id="removingcustomusermodel">Removing Custom User Model</h6>
+<p><strong>Removing Custom User Model</strong></p>
 
 <p>A bit of history, at first <a href="http://www.twitter.com/timlinux">Tim Sutton</a> and I created the Flask version <a href="https://github.com/kartoza/flask_user_map">here</a>. It was a simple flask app with only sqlite to save users. For the online version of it, Python Indonesia is using this project here <a href="http://members.python.or.id/">Python Indonesia User Map</a>. As we needed some more features and wanted to make InaSAFE Realtime more like a web app, we created django project for all InaSAFE web related project. So the first thing I did was to re-implement the User Map with Django. </p>
 
@@ -220,19 +220,19 @@
 
 <p>But, the custom user model has made this apps not reusable for others to plug the apps on their existing django projects. So, after some thoughts, I decided to get rid of that and make Django User Map extend the auth user model defined for the project. This is making Django User Map really simple now as it doesn't care what the user model looks like, or how the authentication backend works. As the users need to log in before adding/updating themselves on the user map, the only thing I need to know is the login view of the project. This must be defined in the user map setting. Read here <a href="http://www.akbargumbira.com/django-user-map/#login-view">Login View</a></p>
 
-<h6 id="usingrestapi">Using REST API</h6>
+<p><strong>Using REST API</strong></p>
 
 <p>I was just thinking that this resource could be useful for others to use. Right now GET is the only operation allowed, returning geojson of the users.</p>
 
-<h6 id="newmarkerfiltercontrol">New marker filter control</h6>
+<p><strong>New marker filter control</strong></p>
 
 <p>Users can select multiple roles for themselves. Therefore, I couldn't cheat filtering user based on roles using Leaflet overlay control. So, I made a custom filter control for that.</p>
 
-<h6 id="makesettingsmorecompliantwithleaflet">Make settings more compliant with Leaflet</h6>
+<p><strong>Make settings more compliant with Leaflet</strong></p>
 
 <p>For the basemap and marker icon, users (I meant, who plug Django User Map  on their Django project), can pass options using the exact same L.tiles and L.icon options. You can just pass any valid options of them in the setting. Read <a href="http://www.akbargumbira.com/django-user-map/#marker">here for marker</a> and <a href="http://www.akbargumbira.com/django-user-map/#map-configuration">here for basemap</a></p>
 
-<h6 id="allowuserstooverridedataprivacycontentandaddnavigationmenu">Allow users to override data privacy content and add navigation menu</h6>
+<p><strong>Allow users to override data privacy content and add navigation menu</strong></p>
 
 <p>This is made possible through the Django template loading mechanism. You can override the data privacy content (<a href="http://www.akbargumbira.com/django-user-map/#data-privacy">read here</a>) or add navigation menu (<a href="http://www.akbargumbira.com/django-user-map/#navigation">read here</a>)</p>
 
@@ -243,11 +243,11 @@
 
 <p>So what I did right now is to use <code>include</code>. So the navigation defined in project's template will be included to the template in user map. As the user map uses Bootstrap 3, users can just use style classes or other component from Bootstrap 3. This is also a drawback for example when users already have their own template for navigation menu, and they use Bootstrap 2. This is the problem I found when I tried to plug Django User Map in to QGIS Django. I tried using scoped styling, but it apparently does not work for all browsers. And it was actually hard to use Bootstrap 3 and make it look like as if it uses Boostrap 2. So, users who have this problem perhaps could just not use the navigation menu. Drop me some comments if you have suggestion!</p>
 
-<h6 id="madepopupcontentdynamicallygenerated">Made popup content dynamically generated</h6>
+<p><strong>Made popup content dynamically generated</strong></p>
 
 <p>Basically what you defined on the setting for <code>api_user_field</code> will be shown on the popup content and on the API. You pick what you want to show yourself!</p>
 
-<h6 id="someotherstuffs">Some other stuffs</h6>
+<p><strong>Some other stuffs</strong></p>
 
 <p>Small stuffs but taking quite an effort, like:</p>
 
@@ -257,8 +257,9 @@
 <li>Rendering popup content in client side using jsRender. Yeah users nowadays have abundant resources of their computers. So why should we render for them on the server side? :) </li>
 </ul>
 
-<p>What is the next plan? <br />
-I want to let users who don't use spatial backend  on their django project to be able to plug this apps as well. I need to look first at some options like django-geojson.</p>
+<p><em>What is the next plan?</em></p>
+
+<p>I want to let users who don't use spatial backend  on their django project to be able to plug this apps as well. I need to look first at some options like django-geojson.</p>
 
 <p>So, if you have Django project, try to plug this Django User Map, and let me know if you have some problems or patches! #ShamelessPlug</p>
     </div>
