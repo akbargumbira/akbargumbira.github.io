@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Akbar Gumbira]]></title><description><![CDATA[I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon]]></description><link>http://www.akbargumbira.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 23 Apr 2016 07:17:34 GMT</lastBuildDate><atom:link href="http://www.akbargumbira.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Google Summer of Code 2016]]></title><description><![CDATA[<p>Last month, I submitted a proposal for Google Summer of Code 2016 (one of the perks when you're a student), and after one month review, my proposal is accepted. The proposal is for QGIS (under OSGEO organization) to make symbols, style, and SVG markers sharing possible through web service.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Akbar Gumbira]]></title><description><![CDATA[I enjoy making software, solving computational or number theory problems, and contributing to open source projects. Like pushing the boundaries to broaden my horizon]]></description><link>http://www.akbargumbira.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 29 May 2016 14:23:37 GMT</lastBuildDate><atom:link href="http://www.akbargumbira.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[GSOC #1: Defining Scope and Hackfest]]></title><description><![CDATA[<p>GSoC coding period has started since last week. During the community bonding period and coding period last week, I spent my time to define the specification for the project. At the beginning of the community period, I posted a QEP (QGIS Enhancement Proposal) <a href="https://github.com/qgis/QGIS-Enhancement-Proposals/issues/58">here</a> to get feedback from the community.</p>]]></description><link>http://www.akbargumbira.com/gsoc-1-defining-use-cases-and-hackfest/</link><guid isPermaLink="false">907b1008-40fa-4c99-b3e9-dbc9d531ab63</guid><dc:creator><![CDATA[Akbar Gumbira]]></dc:creator><pubDate>Sun, 29 May 2016 14:22:37 GMT</pubDate><content:encoded><![CDATA[<p>GSoC coding period has started since last week. During the community bonding period and coding period last week, I spent my time to define the specification for the project. At the beginning of the community period, I posted a QEP (QGIS Enhancement Proposal) <a href="https://github.com/qgis/QGIS-Enhancement-Proposals/issues/58">here</a> to get feedback from the community. The idea of sharing resources was to have a symbology store (symbology being symbol, style, and SVG). So user should be able to browse those resources in QGIS and download it as an item. Having thought that the idea won't change that much, I started to work a bit on the server side on the deployment stuffs with docker and authentication part. This was not a good idea though as later we decided to change the concept. </p>
+
+<p>Richard and Tim came up with an idea to use git as the platform for the repositories as we already have resources lying around in github repositories and Richard thinks that it's too much for a GSoC job to implement the backend stuffs and the tool itself in QGIS. We had a skype chat and I spent a day to just think about it and started to make a new documentation to put my thoughts about it. </p>
+
+<p>We discussed about the concept and the more we discussed the bigger the scope of the project is. Until just tomorrow, we haven't really decided on the scope that I should implement. Lucky for me that QGIS hackfest also started last week. I attended the hackfest to discuss this with my mentors (Ale, Anita), Richard, Tim, and others as well who are interested on this project. These are general scope of the project:</p>
+
+<h5 id="retrievingcollections">Retrieving Collections</h5>
+
+<p>The tool should be able to retrieve collections from the remote repository. Collection is a set of resources (SVGs, Symbols, styles, colorramps, etc) that belongs together that can be used to create a coherent map design. We also define that one collection should be self-sufficient, meaning that the collection contains all the resources needed and doesn't use resources from other collections. This is the highest priority of the GSoC. We will also create an official collections repository as a default.</p>
+
+<h5 id="importingcollections">Importing Collections</h5>
+
+<p>After downloading collections, the tool should import the downloaded collections based on its type so that QGIS users can use the collections right away (for now Symbol and SVG are the priority)</p>
+
+<h5 id="discoveringavailablerepositories">Discovering Available Repositories</h5>
+
+<p>So as users can make their collection repositories on their own, there needs to be a way for the tools to know the available repositories out there to suggest users when they register a repository source in their QGIS. The simplest way is that we make a text file in the official repository and ask people to make a PR if they want their collections suggested on the tools. A better one is to make a web service so users can register their repositories there. </p>
+
+<h5 id="managingmetadata">Managing Metadata</h5>
+
+<p>It's nice for users if they can manage the metadata easily before they share the repository so the metadata is defined correctly. But this is not a high priority as users can define the metadata manually.</p>
+
+<h5 id="sharingrepository">Sharing Repository</h5>
+
+<p>It would be nice for users to be able to share their local repository to the git platform from the tools. This is not a high priority as we think that it would take time as we don't want to restrict ourselves only to Github.</p>
+
+<h5 id="managinglocalrepository">Managing Local Repository</h5>
+
+<p>Before sharing repositories, it would be cool if users can add stuffs (reminding the dependencies if it's not there) or remove stuffs (again telling the users if it's used by other resources). We agreed that this is not a high priority during this GSoC.</p>
+
+<p>If you want to know more details, you can see the doc <a href="https://docs.google.com/document/d/13ETuLBTx5IjVejB8TQPjjsMWBcUQO6pIKrNSrAZUApo/edit?usp=sharing">here</a></p>
+
+<h3 id="hackfest">Hackfest</h3>
+
+<p>This is my first hackfest experience. There are a lot of interesting stuffs the developers are working on (Martin creating a debugging plugin for plugin, Matthias' work on testing framework so that plugin developers don't need to mock things up for their tests, Sandro Mani developing a 'version' of QGIS with super nice UI/UX, and so on so forth). Ale and I also managed to deploy the plugin site with the new user map that had been in the PR lists for quite some time. I didn't manage to look at my PR again for dockerizing the deployment though so that Ale or Tim can deploy it.</p>
+
+<p>These are some photos taken from the hackfest <br>
+<img src="http://www.akbargumbira.com/content/images/2016/05/IMG_20160528_131733470.jpg" alt=""></p>
+
+<p><img src="http://www.akbargumbira.com/content/images/2016/05/IMG_20160528_131711755_HDR.jpg" alt=""></p>
+
+<p><img src="http://www.akbargumbira.com/content/images/2016/05/IMG_20160528_195517347.jpg" alt=""></p>]]></content:encoded></item><item><title><![CDATA[Google Summer of Code 2016]]></title><description><![CDATA[<p>Last month, I submitted a proposal for Google Summer of Code 2016 (one of the perks when you're a student), and after one month review, my proposal is accepted. The proposal is for QGIS (under OSGEO organization) to make symbols, style, and SVG markers sharing possible through web service.</p>
 
 <p><img src="http://www.akbargumbira.com/content/images/2016/04/gsoc.png" alt="alt"></p>
 
